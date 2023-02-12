@@ -22,6 +22,8 @@ function insertTarefa($tituloTarefa,$descTarefa){
     $stmt->bindParam(':d',$descTarefa);   
     try{
         $stmt->execute();
+        header('Location:/tarefas');
+        echo "$('#salvo').show";
     }catch(PDOException $e){
         echo $e->getMessage();
     }

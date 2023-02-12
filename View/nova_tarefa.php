@@ -1,3 +1,4 @@
+<?php include './Control/functions.php'; ?>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -39,13 +40,14 @@
 								<form action="/Control/functions.php?action=insertTarefa" method="post">
 									<div class="form-group">
 										<label>Titulo</label>
-										<input type="text" class="form-control" name="titulo" placeholder="Exemplo: Lavar o carro">
+										<input type="text" class="form-control" name="titulo" placeholder="Exemplo: Lavar o carro" required>
 										<br>
 										<label>Descrição da tarefa:</label>
-										<input type="text" class="form-control" name="desc" placeholder="Exemplo: Usar balde com agua, detergente & esponja">
+										<input type="text" class="form-control" name="desc" placeholder="Exemplo: Usar balde com agua, detergente & esponja" required>
 									</div>
 									<button class="btn btn-success" type="submit" id="btn-cadastrar">Cadastrar</button>
 								</form>
+								<h4 id="salvo">Salvo com sucesso!</h4>
 							</div>
 
 						</div>
@@ -55,3 +57,6 @@
 		</div>
 	</body>
 </html>
+<script>
+	$('#salvo').hide();
+</script>
