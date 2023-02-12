@@ -34,7 +34,7 @@
 					<div class="container pagina">
 						<div class="row">
 							<div class="col">
-								<h4>Tarefas pendentes</h4>
+								<h4>Tarefas <span style="color:red;">pendentes</span></h4>
 								<hr />
 
 								<?php

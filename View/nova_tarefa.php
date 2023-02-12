@@ -3,7 +3,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>App Lista Tarefas</title>
-
+		<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="/css/estilo.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -36,15 +36,18 @@
 								<h4>Nova tarefa</h4>
 								<hr />
 
-								<form>
+								<form action="/Control/functions.php?action=insertTarefa" method="post">
 									<div class="form-group">
+										<label>Titulo</label>
+										<input type="text" class="form-control" name="titulo" placeholder="Exemplo: Lavar o carro">
+										<br>
 										<label>Descrição da tarefa:</label>
-										<input type="text" class="form-control" placeholder="Exemplo: Lavar o carro">
+										<input type="text" class="form-control" name="desc" placeholder="Exemplo: Usar balde com agua, detergente & esponja">
 									</div>
-
-									<button class="btn btn-success">Cadastrar</button>
+									<button class="btn btn-success" type="submit" id="btn-cadastrar">Cadastrar</button>
 								</form>
 							</div>
+
 						</div>
 					</div>
 				</div>

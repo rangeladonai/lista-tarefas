@@ -13,4 +13,7 @@ switch($url){
     case '/tarefas/nova':
         include './View/nova_tarefa.php';
     break;
+
+    default:
+        echo 'ERRO 404';
 }

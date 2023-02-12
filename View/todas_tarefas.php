@@ -38,7 +38,7 @@
 								<hr/>
 
 								<?php 
-									include './Control/verifica.php';
+									include './Control/functions.php';
 									$query = "SELECT * FROM tarefa";
 									$stmt = $pdo->prepare($query);
 									$stmt->execute();
