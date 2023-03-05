@@ -1,7 +1,6 @@
 <?php
 
-    $pdo;
-    $host = 'localhost:3306';
+    $host = 'localhost';
     $user = 'root';
     $pass = '';
     $dbname = 'lista_tarefas';

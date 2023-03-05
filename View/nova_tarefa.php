@@ -1,4 +1,4 @@
-<?php include './Control/functions.php'; ?>
+<?php ?>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -37,7 +37,7 @@
 								<h4>Nova tarefa</h4>
 								<hr />
 
-								<form action="/Control/functions.php?action=insertTarefa" method="post">
+								<form action="INSERIR TAREFA" method="post">
 									<div class="form-group">
 										<label>Titulo</label>
 										<input type="text" class="form-control" name="titulo" placeholder="Exemplo: Lavar o carro" required>

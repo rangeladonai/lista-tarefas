@@ -38,7 +38,7 @@
 								<hr/>
 
 								<?php 
-									include './Control/functions.php';
+									include 'VERIFICARSTATUS';
 									$query = "SELECT * FROM tarefa";
 									$stmt = $pdo->prepare($query);
 									$stmt->execute();
