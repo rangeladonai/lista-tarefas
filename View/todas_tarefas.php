@@ -1,4 +1,4 @@
-<?php include('./Database/connection.php') ?>
+<?php include('../Database/connection.php') ?>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -14,7 +14,7 @@
 		<nav class="navbar navbar-light bg-light">
 			<div class="container">
 				<a class="navbar-brand" href="#">
-					<img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+					<img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
 					App Lista Tarefas
 				</a>
 			</div>
@@ -38,7 +38,7 @@
 								<hr/>
 
 								<?php 
-									include 'VERIFICARSTATUS';
+									include '../Database/connection.php';
 									$query = "SELECT * FROM tarefa";
 									$stmt = $pdo->prepare($query);
 									$stmt->execute();
@@ -50,7 +50,7 @@
 											<div class="col-sm-9">
 											<h5>' . $data['titulo'] .'</h5>
 											<small>' . $data['descricao'] . '</small>
-											<small>' . verificaStatus($data['status_tarefa']) .'</small>
+											<small>' . $data['status_tarefa'] .'</small>
 											</div>
 											<div class="col-sm-3 mt-2 d-flex justify-content-between">
 												<i class="fas fa-trash-alt fa-lg text-danger"></i>
